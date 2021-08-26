@@ -1,9 +1,11 @@
+$font-light-blue:#9796f0;
 body {
   background-color: #eee;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   @extend %ui-grad-light;
 }
+
 //gradients 
 %ui-grad-bright{
   background: #12c2e9;  /* fallback for old browsers */
@@ -23,17 +25,28 @@ background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, F
   border-radius: 20px;
   box-shadow: 0px 0px 20px #1a181d57;
 
+  .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent !important;
+  }
+  .link-clr{
+    color: $font-light-blue;
+  }
+  input[type="radio"] {
+    cursor: pointer;
+  }
   input.in-box {
     @extend %ui-grad-light;
     height: 60px;
     text-indent: 25px;
     border: 2px solid #d6d4d4;
-   
+
+    &:focus {
+      box-shadow: 0 0 10px rgb(58, 55, 55);
+    }
+    
   }
-  input:focus {
-    box-shadow: none;
-    border: 2px solid blue
-  }
+  
   .fa-search {
     position: absolute;
     top: 20px;
